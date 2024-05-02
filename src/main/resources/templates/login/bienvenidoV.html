@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head th:replace="layout/layoutMain :: head"></head>
+<head th:replace="layout/layoutMain :: head">
+ 
+</head>
 
 <body>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
@@ -14,42 +16,16 @@
         <div class="content-wrapper">
           <div class="container-fluid"><!-- Basic form layout section start -->
             <section id="basic-form-layouts">
-              <div class="row">
-                <div class="col-sm-12">
-                  
-                </div>
-              </div>
-              <!-- <div class="row">
-                <div class="col-md-12">
-                  <div class="card">
-                    <div class="card-body">
-                      <h2 th:text="${session.usuario.persona.nombre+' '+session.usuario.persona.ap_paterno+' '+session.usuario.persona.ap_materno}"></h2>
-                    </div>
-                  </div>
-                </div>
-              </div> -->
-            
-              <div class="col-xl-12 col-lg-12 col-12">
-                <center><img src="../../../../app-assets/tvu_1-removebg-preview.png"  alt="qwe"></center>
-              </div>
-            </section>
-            <!-- <section id="basic-form-layouts">
               
-              <div class="col-xl-12 col-lg-12 col-12">
-                <div class="card bg-white">
-                  <div class="card-body">
-                    <div class="card-img-top img-fluid bg-cover height-600"
-                      style="background: url('../app-assets/fondo_tvu2.jpeg') 100%;">
-                    </div>
-                  </div>
-                </div>
+              <div class="col-xl-12 col-lg-12 col-12 d-flex justify-content-center align-items-center" style="height: 100vh;">
+                <img src="../../../../app-assets/tvu_1-removebg-preview.png" alt="qwe">
               </div>
             </section>
-         -->
             <!-- // Basic form layout section end -->
           </div>
         </div>
       </div>
+    </div>
 
       <div th:replace="layout/layoutMain :: footer"></div>
 
