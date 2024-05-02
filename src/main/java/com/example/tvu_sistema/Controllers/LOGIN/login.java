@@ -17,7 +17,7 @@ public class login {
     public String empty() {
 
         
-        return "redirect:/LoginV";
+        return "login/bienvenidoV";
     }
 
     @RequestMapping(value = "LoginV", method = RequestMethod.GET) // Pagina principal
