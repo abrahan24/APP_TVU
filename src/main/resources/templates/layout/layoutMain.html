@@ -42,18 +42,7 @@
             overflow: hidden;
         }
     </style>
-    <style>
-        #vista_previa {
-          display: flex;
-          align-items: center;
-        }
-        #vista_previa img {
-          margin-right: 10px;
-        }
-        #vista_previa h5 {
-          margin: 0;
-        }
-      </style>
+   
     <!-- STILOS DE CARGA -->
     <style>
         .loader-container {
@@ -93,8 +82,8 @@
 
 <body>
 
-    <div data-background-color="danger" style="background-color: #000814;" class="app-sidebar" th:fragment="menuLateral">
-        <div class="sidebar-header">
+    <div data-background-color="danger" style="background-color: #000814;" class="app-sidebar hide-sidebar" th:fragment="menuLateral">
+        <div class="app-sidebar hide-sidebar">
             <div class="logo clearfix">
                 <!-- <center>
                     <a href="/admin/BienvenidoV" class="logo-text float-left">
