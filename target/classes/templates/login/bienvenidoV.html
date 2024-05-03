@@ -5,7 +5,7 @@
  
 </head>
 
-<body style="overflow: hidden;">
+<body>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="wrapper">
     <div th:replace="layout/layoutMain :: menuLateral"></div>
@@ -36,15 +36,30 @@
                 <div class="tab-content px-1 pt-1">
                   <div role="tabpanel" class="tab-pane active show" id="active" aria-labelledby="active-tab"
                     aria-expanded="true">
-                    <p>Bienvenido
+                    <br>
+                    <p style="color: aliceblue; text-align: justify;">¡Bienvenido a nuestra emocionante app móvil! ¿Te encanta estar siempre conectado a nuestra radio universitaria
+                      o disfrutar de la televisión universitaria TVU en línea estés donde estés? ¡Entonces estás en el lugar adecuado! Nuestra
+                      aplicación te brinda la libertad de escuchar tus estaciones de radio preferidas y ver programas de televisión en
+                      tiempo real, todo desde la comodidad de tu dispositivo móvil. ¡Prepárate para sumergirte en un mundo de
+                      entretenimiento sin límites!
                     </p>
+                    <footer class="footer footer-static footer-light">
+                      <p class="clearfix text-muted text-center px-2" style="color: azure;">
+                          <span>Copyright &copy; 
+                              <span id="year"></span> 
+                              <a href="https://www.facebook.com/TVUCanal21" id="pixinventLink" target="_blank" class="text-bold-800 info darken-2">TVU</a>, Todos los derechos reservados.
+                          </span>
+                      </p>
+                      <script>
+                          document.getElementById('year').textContent = new Date().getFullYear();
+                      </script>
+                  </footer>
                   </div>
                   <div class="tab-pane" id="link" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
                     <div class="col-xl-12 col-lg-12 col-12 ">
                       <br>
                       <br>
                       <br>
-  
                       <center><img style="max-width: 75%;
                           height: auto;" src="../../../../app-assets/tvu_4.png"></center>
   
@@ -58,10 +73,11 @@
                   <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
                     <br>
                     <br>
-                    <div>
+                    <div class="embed-responsive embed-responsive-16by9">
                       <iframe id="videoFrame" class="embed-responsive-item" src="http://172.16.21.13:8080/" frameborder="0"
-                        allowfullscreen="allowfullscreen" height="600" width="350"></iframe>
+                        allowfullscreen="allowfullscreen"></iframe>
                     </div>
+                    
                   </div>
                 </div>
               </div>
