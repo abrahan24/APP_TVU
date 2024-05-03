@@ -5,74 +5,77 @@
  
 </head>
 
-<body>
+<body style="overflow: hidden;">
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="wrapper">
     <div th:replace="layout/layoutMain :: menuLateral"></div>
     <div th:replace="layout/layoutMain :: menuCabezera"></div>
-
+  
     <div class="main-panel" >
-      
+  
       <div class="main-content" >
-        <div class="content-wrapper">
+        <div class="content-wrapper" >
           <div class="container-fluid">
             <section id="basic-form-layouts">
               <div class="card-block">
                 <ul class="nav nav-tabs nav-justified">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="active-tab" style="color: aliceblue;" data-toggle="tab" href="#active" aria-controls="active"
-                            aria-expanded="true">INICIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="link-tab" style="color: aliceblue;" data-toggle="tab" href="#link" aria-controls="link"
-                            aria-expanded="false">RADIO</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="link-tab" style="color: aliceblue;" data-toggle="tab" href="#tv"
-                          aria-controls="link"
-                          aria-expanded="false">TV</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" id="active-tab" style="color: aliceblue;" data-toggle="tab" href="#active"
+                      aria-controls="active" aria-expanded="true">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="link-tab" style="color: aliceblue;" data-toggle="tab" href="#link"
+                      aria-controls="link" aria-expanded="false">RADIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="link-tab" style="color: aliceblue;" data-toggle="tab" href="#tv"
+                      aria-controls="link" aria-expanded="false">TV</a>
+                  </li>
                 </ul>
-                
+  
                 <div class="tab-content px-1 pt-1">
-                    <div role="tabpanel" class="tab-pane active show" id="active" aria-labelledby="active-tab" aria-expanded="true">
-                      <p>Bienvenido
-                      </p>
-                    </div>
-                    <div class="tab-pane" id="link" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
-                      <div class="col-xl-12 col-lg-12 col-12 " >
-                        <br>
-                        <br>
-                        <br>
-                    
-                       <center><img style="max-width: 75%;
-                        height: auto;" src="../../../../app-assets/tvu_4.png" ></center> 
-                  
-                      </div>
+                  <div role="tabpanel" class="tab-pane active show" id="active" aria-labelledby="active-tab"
+                    aria-expanded="true">
+                    <p>Bienvenido
+                    </p>
+                  </div>
+                  <div class="tab-pane" id="link" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
+                    <div class="col-xl-12 col-lg-12 col-12 ">
                       <br>
-                      <div style="max-width: 500px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
-                        <audio preload="true" id="player" controls crossorigin></audio>
+                      <br>
+                      <br>
+  
+                      <center><img style="max-width: 75%;
+                          height: auto;" src="../../../../app-assets/tvu_4.png"></center>
+  
                     </div>
+                    <br>
+                    <div
+                      style="max-width: 500px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
+                      <audio preload="true" id="player" controls crossorigin></audio>
                     </div>
-                    <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
-                      <div > 
-                        <iframe id="videoFrame" class="embed-responsive-item" frameborder="0" allowfullscreen="allowfullscreen" height="500" width="400"></iframe> 
-                      </div>
-                      <div id="dplayer"></div>
+                  </div>
+                  <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
+                    <br>
+                    <br>
+                    <div>
+                      <iframe id="videoFrame" class="embed-responsive-item" src="http://172.16.21.13:8080/" frameborder="0"
+                        allowfullscreen="allowfullscreen" height="600" width="350"></iframe>
                     </div>
+                    <div id="dplayer"></div>
+                  </div>
                 </div>
-            </div>
-              
+              </div>
             </section>
           </div>
         </div>
       </div>
     </div>
-
-      <div th:replace="layout/layoutMain :: footer"></div>
-
-    </div>
+  
+    <!-- <div th:replace="layout/layoutMain :: footer"></div> -->
+  
   </div>
+  
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   
   <div th:replace="layout/layoutMain :: scrip1"></div>
@@ -94,9 +97,9 @@
     plyr.setup(audio);
   });
   </script>
-  <script>
+  <!-- <script>
     $(document).ready(function(){
-      openVideoModal("https://www.facebook.com/chimsedinangFanpage/videos/tr%E1%BB%B1c-ti%E1%BA%BFp-4v4-random-spartacus-gaming-vs-vitamin-network-aoe-blv-mario-channel/767783242145195/?locale=es_LA");
+      // openVideoModal("http://172.16.21.13:8080/");
        
         });
     
@@ -137,7 +140,7 @@
         return videoId;
       }
    
-  </script>
+  </script> -->
 </body>
 
 </html>
