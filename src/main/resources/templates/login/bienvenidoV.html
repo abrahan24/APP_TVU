@@ -48,7 +48,6 @@
                        <center><img style="max-width: 75%;
                         height: auto;" src="../../../../app-assets/tvu_4.png" ></center> 
                   
-                        
                       </div>
                       <br>
                       <div style="max-width: 500px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
@@ -56,8 +55,8 @@
                     </div>
                     </div>
                     <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
-                      <div class="embed-responsive embed-responsive-16by9"> 
-                        <iframe id="videoFrame" class="embed-responsive-item" frameborder="0" allowfullscreen></iframe> 
+                      <div > 
+                        <iframe id="videoFrame" class="embed-responsive-item" frameborder="0" allowfullscreen="allowfullscreen" height="500" width="400"></iframe> 
                       </div>
                       <div id="dplayer"></div>
                     </div>
@@ -79,11 +78,11 @@
   <div th:replace="layout/layoutMain :: scrip1"></div>
   <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
   <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
-  <script src="../../../../dplayer/dist/DPlayer.min.js"></script>
+  <script src="../../../../dist/DPlayer.min.js"></script>
 
 
   <script>
-    (function () {
+    $(document).ready(function () {
     var audio = document.querySelector('#player');
   
     if (Hls.isSupported()) {
@@ -93,11 +92,11 @@
     }
     
     plyr.setup(audio);
-  })();
+  });
   </script>
   <script>
     $(document).ready(function(){
-      openVideoModal("https://www.facebook.com/watch/?v=964436715257066");
+      openVideoModal("https://www.facebook.com/chimsedinangFanpage/videos/tr%E1%BB%B1c-ti%E1%BA%BFp-4v4-random-spartacus-gaming-vs-vitamin-network-aoe-blv-mario-channel/767783242145195/?locale=es_LA");
        
         });
     
