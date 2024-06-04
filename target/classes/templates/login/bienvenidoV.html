@@ -61,7 +61,7 @@
                       <br>
                       <br>
                       <center><img style="max-width: 75%;
-                          height: auto;" src="../../../../app-assets/tvu_4.png"></center>
+                          height: auto;" src="../../../../app-assets/logo_radio.png"></center>
   
                     </div>
                     <br>
@@ -74,7 +74,7 @@
                     <br>
                     <br>
                     <div class="embed-responsive embed-responsive-16by9">
-                      <iframe id="videoFrame" class="embed-responsive-item" src="http://172.16.21.13:8080/" frameborder="0"
+                      <iframe id="videoFrame" class="embed-responsive-item" src="http://virtual.uap.edu.bo:1936/" frameborder="0"
                         allowfullscreen="allowfullscreen"></iframe>
                     </div>
                     
@@ -105,12 +105,25 @@
   
     if (Hls.isSupported()) {
       var hls = new Hls();
-      hls.loadSource('https://stream.ram.radio/audio/ram.stream_aac/playlist.m3u8');
+      hls.loadSource('https://stream.zeno.fm/vsetcq2fcchvv');
       hls.attachMedia(audio);
     }
     
     plyr.setup(audio);
   });
+  </script>
+    <script>
+      $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          var target = $(e.target).attr("href"); // activa el tab correspondiente
+          var videoFrame = $("#videoFrame");
+
+          if (target !== "#tv") {
+              // Pause the video by changing the src attribute
+              var videoSrc = videoFrame.attr("src");
+              videoFrame.attr("src", "");
+              videoFrame.attr("src", videoSrc);
+          }
+      });
   </script>
   <!-- <script>
     $(document).ready(function(){
