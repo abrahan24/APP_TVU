@@ -65,10 +65,10 @@
   
                     </div>
                     <br>
-                    <div
-                      style="max-width: 500px; margin: 0 auto; display: flex; justify-content: center; align-items: center;">
-                      <audio preload="true" id="player" controls crossorigin></audio>
-                    </div>
+                    <audio src="https://stream.zeno.fm/vsetcq2fcchvv" controls type='audio/mpeg'></audio>
+
+                  
+             
                   </div>
                   <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
                     <br>
@@ -99,19 +99,7 @@
   <script src="../../../../dist/DPlayer.min.js"></script>
 
 
-  <script>
-    $(document).ready(function () {
-    var audio = document.querySelector('#player');
-  
-    if (Hls.isSupported()) {
-      var hls = new Hls();
-      hls.loadSource('https://stream.zeno.fm/vsetcq2fcchvv');
-      hls.attachMedia(audio);
-    }
-    
-    plyr.setup(audio);
-  });
-  </script>
+ 
     <script>
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           var target = $(e.target).attr("href"); // activa el tab correspondiente
@@ -125,50 +113,7 @@
           }
       });
   </script>
-  <!-- <script>
-    $(document).ready(function(){
-      // openVideoModal("http://172.16.21.13:8080/");
-       
-        });
-    
-    function openVideoModal(videoUrl) {
-      var embedUrl;
-  
-      // Verificar si el enlace es de YouTube
-      if (videoUrl.includes("youtube.com") || videoUrl.includes("youtu.be")) {
-        // embedUrl = videoUrl.replace("https://youtu.be/", "https://www.youtube.com/embed/");
-        var videoID = getYouTubeVideoId(videoUrl);
-        if (videoID) {
-          embedUrl = "https://www.youtube.com/embed/"+videoID;
-        }
-      }
-      // Verificar si el enlace es de Facebook
-      else if (videoUrl.includes("facebook.com")) {
-        // Modificar la URL de Facebook para que sea compatible con la incrustación en un iframe
-        // Convertir el enlace de Facebook a un enlace de video compatible con un iframe
-        embedUrl = "https://www.facebook.com/plugins/video.php?href=" + encodeURIComponent(videoUrl); // Construir la URL del video compatible con el iframe
-      }
-      // Si no es un enlace válido, mostrar un mensaje de error
-      else {
-        alert("Enlace de video no válido");
-        return;
-      }
-  
-      // Establecer el src del iframe con la URL modificada y mostrar el modal
-      $('#videoFrame').attr('src', embedUrl);
-    }
-    function getYouTubeVideoId(url) {
-        var videoId;
-        // Patrón para buscar el ID del video de YouTube
-        var pattern = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-        var match = url.match(pattern);
-        if (match && match[1]) {
-          videoId = match[1];
-        }
-        return videoId;
-      }
-   
-  </script> -->
+
 </body>
 
 </html>
