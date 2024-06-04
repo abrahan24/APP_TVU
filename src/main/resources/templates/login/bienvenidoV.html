@@ -6,13 +6,17 @@
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div class="loader-container">
+    <div class="loader"></div>
+  </div>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="wrapper">
     <div th:replace="layout/layoutMain :: menuLateral"></div>
     <div th:replace="layout/layoutMain :: menuCabezera"></div>
   
     <div class="main-panel" >
-  
+      
       <div class="main-content" >
         <div class="content-wrapper" >
           <div class="container-fluid">
@@ -75,9 +79,9 @@
                         </div>
                       </center>
                       
-                    <footer class="footer footer-static footer-light">
-                      <p class="clearfix text-muted text-center px-2" style="color: azure;">
-                        <span class="text">Copyright &copy;
+                    <footer class="footer footer-static footer-light" >
+                      <p class="clearfix text-muted text-center px-2">
+                        <span class="text" style="color: rgb(0, 0, 0);">Copyright &copy;
                           <span id="year"></span>
                           <a id="pixinventLink" target="_blank" class="text-bg-dark info darken-1">TVU</a>, Todos los derechos reservados.
                         </span>
@@ -105,11 +109,10 @@
                   <div class="tab-pane" id="tv" role="tabpanel" aria-labelledby="link-tab" aria-expanded="false">
                     <br>
                     <br>
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <div class="embed-responsive embed-responsive-16by9 fullscreenfix">
                       <iframe id="videoFrame" class="embed-responsive-item" src="http://virtual.uap.edu.bo:1936/" frameborder="0"
                         allowfullscreen="allowfullscreen"></iframe>
                     </div>
-                    
                   </div>
                 </div>
               </div>
@@ -128,11 +131,13 @@
   <div th:replace="layout/layoutMain :: scrip1"></div>
   <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
   <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
-  <script src="../../../../dist/DPlayer.min.js"></script>
-
-
- 
     <script>
+        // Script para ocultar el preloader una vez que la página haya cargado completamente
+        window.addEventListener('load', function() {
+          var preloader = document.getElementById('preloader');
+          preloader.style.display = 'none';
+        });
+
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           var target = $(e.target).attr("href"); // activa el tab correspondiente
           var videoFrame = $("#videoFrame");
