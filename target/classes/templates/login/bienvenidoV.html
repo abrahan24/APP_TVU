@@ -65,7 +65,7 @@
   
                     </div>
                     <br>
-                    <audio src="https://stream.zeno.fm/vsetcq2fcchvv" controls type='audio/mpeg'></audio>
+                    <audio id="audio" src="https://stream.zeno.fm/vsetcq2fcchvv" controls type='audio/mpeg'></audio>
 
                   
              
@@ -104,12 +104,17 @@
       $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           var target = $(e.target).attr("href"); // activa el tab correspondiente
           var videoFrame = $("#videoFrame");
+          var audio = $("#audio");
 
           if (target !== "#tv") {
               // Pause the video by changing the src attribute
               var videoSrc = videoFrame.attr("src");
               videoFrame.attr("src", "");
               videoFrame.attr("src", videoSrc);
+          }else if (target !== "#link"){
+            var audioSrc = audio.attr("src");
+            audio.attr("src", "");
+            audio.attr("src", audioSrc);
           }
       });
   </script>
