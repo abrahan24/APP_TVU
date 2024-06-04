@@ -46800,10 +46800,10 @@ datetime .form-group {
   color : #FFFFFF;
 }
 .app-sidebar[data-background-color='danger'], .off-canvas-sidebar[data-background-color='danger'] {
-  background-color : #FF4961;
+  background-color : #d43b3b;
 }
 .app-sidebar[data-background-color='danger'] .sidebar-background:after, .off-canvas-sidebar[data-background-color='danger'] .sidebar-background:after {
-  background : #FF4961;
+  background : #d43b3b;
   opacity : 0.9;
 }
 .app-sidebar[data-background-color='danger'] .navigation i, .app-sidebar[data-background-color='danger'] .navigation li > a, .off-canvas-sidebar[data-background-color='danger'] .navigation i, .off-canvas-sidebar[data-background-color='danger'] .navigation li > a {
