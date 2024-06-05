@@ -110,7 +110,7 @@
                     <br>
                     <br>
                     <div class="embed-responsive embed-responsive-16by9 fullscreenfix">
-                      <iframe id="videoFrame" class="embed-responsive-item" src="http://virtual.uap.edu.bo:1936/" frameborder="0"
+                      <iframe id="videoFrame" class="embed-responsive-item"  frameborder="0"
                         allowfullscreen="allowfullscreen"></iframe>
                     </div>
                   </div>
@@ -142,22 +142,20 @@
           var target = $(e.target).attr("href"); // activa el tab correspondiente
           var videoFrame = document.getElementById("videoFrame");
           var audio = document.getElementById("audio");
-  
-          if (target !== "#tv") {
-              // Pause the video by sending a postMessage to the iframe
-              var videoSrc = videoFrame.src;
-              videoFrame.src = "";
-              videoFrame.src = videoSrc;
+          alert(target);
+          switch (target) {
+            case "#tv":
+              videoFrame.src = "http://virtual.uap.edu.bo:1936/";
               audio.pause();
-          }
-  
-          if (target !== "#link") {
-              // Pause the audio
-              audio.pause();
-              var videoSrc = videoFrame.src;
+              break;
+            case "#link":
               videoFrame.src = "";
-              videoFrame.src = videoSrc;
+              break;
+          
+            default:
+              break;
           }
+         
       });
   </script>
 
