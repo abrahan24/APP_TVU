@@ -13,11 +13,8 @@
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <div class="wrapper">
       <div data-background-color="danger" style="background-color: #000814;" class="app-sidebar sidebar" >
-          
         <div class="sidebar-content">
-
             <center><img src="../../../../app-assets/tvu_1-removebg-preview.png"  alt="qwe"></center>
-
             <div class="nav-container">
                 <ul id="main-menu-navigation" data-menu="menu-navigation" class="navigation navigation-main">
                     
@@ -171,9 +168,49 @@
   
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   
-  <div th:replace="layout/layoutMain :: scrip1"></div>
-  <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
-  <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+    <script src="../../../../app-assets/js/bootstrap.bundle.js"></script>
+    <!-- <script src="../../../../app-assets/js/sweetaler2.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <script src="https://unpkg.com/oembed-api/lib/oembed-api.js"></script> -->
+
+    <script src="../../../../app-assets/vendors/js/core/jquery-3.3.1.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/core/popper.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/core/bootstrap.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/prism.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/jquery.matchHeight-min.js"></script>
+    <script src="../../../../app-assets/vendors/js/screenfull.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/pace/pace.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/sweetalert2.min.js"></script>
+    <script src="../../../../app-assets/js/app-sidebar.js"></script>
+    <script src="../../../../app-assets/js/notification-sidebar.js"></script>
+    <script src="../../../../app-assets/js/components-modal.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/datatables.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/dataTables.buttons.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/buttons.flash.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/jszip.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/pdfmake.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/vfs_fonts.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/buttons.html5.min.js"></script>
+    <script src="../../../../app-assets/vendors/js/datatable/buttons.print.min.js"></script>
+    <script src="../../../../app-assets/js/data-tables/datatable-basic.js"></script>
+    <script src="../../../../app-assets/js/tooltip.js"></script>
+    <script src="../../../../app-assets/vendors/js/jqBootstrapValidation.js"></script>
+    <script src="../../../../app-assets/js/form-validation.js"></script>
+    <script src="../../../../app-assets/vendors/js/select2.full.js"></script>
+    <script src="../../../../app-assets/vendors/js/pickadate/picker.js"></script>
+    <script src="../../../../app-assets/vendors/js/pickadate/picker.date.js"></script>
+    <script src="../../../../app-assets/vendors/js/pickadate/picker.time.js"></script>
+    <script src="../../../../app-assets/vendors/js/pickadate/legacy.js"></script>
+    <script src="../../../../app-assets/js/pick-a-datetime.js"></script>
+    <script src="../../../../app-assets/js/popover.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            document.querySelector('.loader-container').style.display = 'none';
+        });
+    </script>
+    <script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
+    <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
     <script>
         // Script para ocultar el preloader una vez que la página haya cargado completamente
         window.addEventListener('load', function() {
