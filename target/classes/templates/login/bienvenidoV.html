@@ -140,21 +140,19 @@
 
         $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
           var target = $(e.target).attr("href"); // activa el tab correspondiente
-          var videoFrame = $("#videoFrame");
-          var audio = $("#audio");
+          var videoFrame = document.getElementById("videoFrame");
+          var audio = document.getElementById("audio");
   
           if (target !== "#tv") {
-              // Pause the video by changing the src attribute
-              var videoSrc = videoFrame.attr("src");
-              videoFrame.attr("src", "");
-              videoFrame.attr("src", videoSrc);
+              // Pause the video by sending a postMessage to the iframe
+              var videoSrc = videoFrame.src;
+              videoFrame.src = "";
+              videoFrame.src = videoSrc;
           }
   
           if (target !== "#link") {
-              // Pause the audio by changing the src attribute
-              var audioSrc = audio.attr("src");
-              audio.attr("src", "");
-              audio.attr("src", audioSrc);
+              // Pause the audio
+              audio.pause();
           }
       });
   </script>
