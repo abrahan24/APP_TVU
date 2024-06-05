@@ -148,11 +148,15 @@
               var videoSrc = videoFrame.src;
               videoFrame.src = "";
               videoFrame.src = videoSrc;
+              audio.pause();
           }
   
           if (target !== "#link") {
               // Pause the audio
               audio.pause();
+              var videoSrc = videoFrame.src;
+              videoFrame.src = "";
+              videoFrame.src = videoSrc;
           }
       });
   </script>
